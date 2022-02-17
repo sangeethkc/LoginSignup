@@ -2,28 +2,42 @@
  session_start()
 ?>
 
+
 <!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale= 1">
 <header>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 </header>
-<nav>
-    <div class="wrapper">
-        <a href="index.php"></a>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <?php
-                if (isset($_SESSION['userUid'])){
-                    echo "<li><a href='profile.php'>Profile</a></li>";
-                    echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
-                } else {
-                    echo "<li><a href='signup.php'>Signup</a></li>";
-                    echo "<li><a href='login.php'>Login</a></li>";
-                }
-            ?>  
-        </ul>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-    </div>
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light bg-primary">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <?php
+        if (isset($_SESSION['userUid'])){
+            echo "<li class='nav-item active'>
+            <a class='nav-link' href='profile.php'>Profile</a>
+            </li>";
+            echo "<li class='nav-item'>
+            <a class='nav-link' href='includes/logout.inc.php'>Logout</a>
+            </li>";
+        } else {
+            echo "<li class='nav-item'>
+            <a class='nav-link' href='signup.php'>Signup</a>
+            </li>";
+            echo "<li class='nav-item'>
+            <a class='nav-link' href='login.php'>Login</a>
+            </li>";
+        }
+        ?>
+    </ul>
+  </div>
 </nav>
+</div>

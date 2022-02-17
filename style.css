@@ -1,4 +1,5 @@
-p {
-    font-family:serif;
-    font-size: 20px;
+.form-control{
+    margin: left 20px; /*-for left and right margin;*/
+    margin-bottom:5px; /* form top and bottom margin;*/
+    width: 500px;
 }
