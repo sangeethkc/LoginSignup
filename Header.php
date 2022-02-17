@@ -22,19 +22,11 @@
       </li>
       <?php
         if (isset($_SESSION['userUid'])){
-            echo "<li class='nav-item active'>
-            <a class='nav-link' href='profile.php'>Profile</a>
-            </li>";
-            echo "<li class='nav-item'>
-            <a class='nav-link' href='includes/logout.inc.php'>Logout</a>
-            </li>";
+            echo "<li class='nav-item active'><a class='nav-link' href='profile.php'>Profile</a></li>";
+            echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Logout</a></li>";
         } else {
-            echo "<li class='nav-item'>
-            <a class='nav-link' href='signup.php'>Signup</a>
-            </li>";
-            echo "<li class='nav-item'>
-            <a class='nav-link' href='login.php'>Login</a>
-            </li>";
+            echo "<li class='nav-item'><a class='nav-link' href='signup.php'>Signup</a></li>";
+            echo "<li class='nav-item'><a class='nav-link' href='login.php'>Login</a></li>";
         }
         ?>
     </ul>
