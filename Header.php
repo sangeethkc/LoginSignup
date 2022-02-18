@@ -14,22 +14,22 @@
 <link rel="stylesheet" href="style.css">
 </header>
 <div class="container">
-<nav class="navbar navbar-expand-md navbar-light bg-primary">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <?php
-        if (isset($_SESSION['userUid'])){
-            echo "<li class='nav-item active'><a class='nav-link' href='profile.php'>Profile</a></li>";
-            echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Logout</a></li>";
-        } else {
-            echo "<li class='nav-item'><a class='nav-link' href='signup.php'>Signup</a></li>";
-            echo "<li class='nav-item'><a class='nav-link' href='login.php'>Login</a></li>";
-        }
-        ?>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-md navbar-light bg-primary">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <?php
+          if (isset($_SESSION['userUid'])){
+              echo "<li class='nav-item active'><a class='nav-link' href='profile.php'>Profile</a></li>";
+              echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Logout</a></li>";
+          } else {
+              echo "<li class='nav-item'><a class='nav-link' href='signup.php'>Signup</a></li>";
+              echo "<li class='nav-item'><a class='nav-link' href='login.php'>Login</a></li>";
+          }
+          ?>
+      </ul>
+    </div>
+  </nav>
 </div>
